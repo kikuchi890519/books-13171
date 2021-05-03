@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      新しい一冊で人生をより豊かに
+    </h2>
+    
+    <p class='service-explain'>
+      みんなで最高の図書館を作ろう
+    </p>
+    <p class='service-explain'>
+      おすすめの本を紹介するアプリです
+    </p>
+    <%# <div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%# <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    <%# </div> %>
+  </div>
+  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+
+   <div class='book-contents'>
+    <h2 class='title'>ピックアップカテゴリー</h2>
+    <%= link_to '新規投稿一覧', "#", class: "subtitle" %>
+    <ul class='book-lists'>
+
+<%= link_to "/items/new", class: 'purchase-btn' do %>
+  <span class='purchase-btn-text'>紹介する</span>
+  <%= image_tag 'book-icon.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+ <%= render "shared/footer" %>

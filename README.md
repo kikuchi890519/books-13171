@@ -1,24 +1,65 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Users
+|Column                |Type   |Options                |
+|nickname              |string |null:false, unique:true|
+|email                 |string |null:false, unique:true|
+|encrypted_password    |string |null:false             |
+|first_name            |string |null:false             |
+|last_name             |string |null:false             |
+|first_name_kana       |string |null:false             |
+|last_name_kana        |string |null:false             |
 
-Things you may want to cover:
+### Association
+- has_many :books
+- has_many :orders
+- has_many :likes
 
-* Ruby version
+## Books
+|Column             |Type       |Options          |
+|name               |string     |null:false       |
+|title              |string     |null:false       |
+|author             |string     |null:false       |
+|publishing_company |integer    |null:false       |
+|category_id        |integer    |null:false       |
+|summary            |text       |null:false       |
+|output             |text       |null:false       |
+|price              |integer    |null:false       |
+|user               |references |foreign_key: true|
 
-* System dependencies
+### Association
+- belongs_to :user
+- has_one    :order
+- has_many :likes
 
-* Configuration
+## Likes
+|Column         |Type         |Options          |
+|user           |references   |foreign_key: true|
+|book           |references   |foreign_key: true|
 
-* Database creation
+### Association
+- belongs_to    :user
+- belongs_to    :book
 
-* Database initialization
+## Order
+|Column         |Type         |Options          |
+|user           |references   |foreign_key: true|
+|book           |references   |foreign_key: true|
 
-* How to run the test suite
+### Association
+- belongs_to    :user
+- belongs_to    :book
+- has_one       :delivery
 
-* Services (job queues, cache servers, search engines, etc.)
+## Deliveries
+|Column             |Type       |Options          |
+|post_code          |string     |null:false       |
+|city_id            |integer    |null:false       |
+|municipality       |string     |null:false       |
+|address            |string     |null:false       |
+|building_name      |string     |                 |
+|phone_number       |string     |null:false       |
+|order              |references |foreign_key: true|
 
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to     :order
