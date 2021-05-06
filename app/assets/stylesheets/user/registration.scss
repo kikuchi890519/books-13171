@@ -49,9 +49,24 @@ body{
   z-index: 2;
 }
 
-/*Nickname,Email入力画面*/
-// なぜ
-.login input[type=text]{
+/*Nickname*/
+// なぜリンクできているのか不明
+.textarea {
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+// Email入力画面
+.login input[type=email]{
   width: 250px;
   height: 30px;
   background: transparent;
@@ -81,7 +96,7 @@ body{
 }
 
 /*登録入力画面*/
-.login input[type=button]{
+.login input[type=submit]{
   width: 250px;
   height: 35px;
   background: #fff;
