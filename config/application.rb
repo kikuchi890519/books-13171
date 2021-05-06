@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Books13171
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    # lize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
     # Settings in config/environments/* take precedence over those specified here.

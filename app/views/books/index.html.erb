@@ -4,11 +4,11 @@
   <%# 画面上部の帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
-      新しい一冊で人生をより豊かに
+     新しい一冊が人生をもっと豊かに
     </h2>
     
     <p class='service-explain'>
-      みんなで最高の図書館を作ろう
+      みんなで最高の図書館をつくっていこう
     </p>
     <p class='service-explain'>
       おすすめの本を紹介するアプリです
@@ -25,8 +25,8 @@
     <%= link_to '新規投稿一覧', "#", class: "subtitle" %>
     <ul class='book-lists'>
 
-<%= link_to "/items/new", class: 'purchase-btn' do %>
+<%= link_to "/books/new", class: 'purchase-btn' do %>
   <span class='purchase-btn-text'>紹介する</span>
-  <%= image_tag 'book-icon.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+  <%= image_tag 'book-icon02.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
  <%= render "shared/footer" %>
