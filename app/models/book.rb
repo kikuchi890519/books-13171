@@ -12,6 +12,7 @@ class Book < ApplicationRecord
     validates :title
     validates :author
     validates :summary
+    validates :image
   end
   
   validates :publishing_company_id, numericality: { other_than: 0 }

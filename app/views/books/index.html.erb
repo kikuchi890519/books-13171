@@ -25,8 +25,24 @@
     <%= link_to '新規投稿一覧', "#", class: "subtitle" %>
     <ul class='book-lists'>
 
-<%= link_to "/books/new", class: 'purchase-btn' do %>
-  <span class='purchase-btn-text'>紹介する</span>
-  <%= image_tag 'book-icon02.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
-<% end %>
- <%= render "shared/footer" %>
+    <% @books.each do |book| %>
+      <li class='list'>
+        <%= link_to book_path(book) do %>
+          <div class='item-img-content'>
+           <%= image_tag book.image, class: "item-img" %>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <a>題名 </a><%= book.title %>
+                <p><a>著者 </a><%= book.author %></p>
+              </h3>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+
+    <%= link_to "/books/new", class: 'purchase-btn' do %>
+      <span class='purchase-btn-text'>紹介する</span>
+      <%= image_tag 'book-icon02.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <% end %>
+    <%= render "shared/footer" %>

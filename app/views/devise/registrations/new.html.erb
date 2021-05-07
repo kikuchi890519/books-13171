@@ -1,35 +1,33 @@
 <%= render "shared/second-header"%>
-
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-<div class="body"></div>
-    <div class="grad"></div>
-    <div class="header">
-      <div>Our<span>Library</span></div>
+ <div class="body"></div>
+   
+    <div class="grad">
+      <div class="header">
+        <div>Our<span>Library</span></div>
+      </div>
+      
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="login">
+          <%= f.text_area :nickname, class:"textarea", id:"nickname", placeholder:"Nickname", maxlength:"40" ,autofocus: true %>
+        </div>
+
+        <div class="login">
+          <%= f.email_field :email, class:"", id:"email", placeholder:"Email" %>
+        </div>
+
+        <div class="login">
+          <%= f.password_field :password, class:"", id:"password", placeholder:"Password" ,autocomplete: "off" %>
+        </div>
+
+        <div class="login">
+          <%= f.password_field :password_confirmation, class:"", id:"password_confirmation", placeholder:"password Confirmation" ,autocomplete: "off" %>
+        </div>
+
+        <div class='login'>
+          <%= f.submit :register, class:"", id:"register", placeholder:"Register" %>
+        </div>
     </div>
-    <br>
-
-    <%= render 'shared/error_messages', model: f.object %>
-
-    <div class="login">
-      <%= f.text_area :nickname, class:"textarea", id:"nickname", placeholder:"Nickname", maxlength:"40" ,autofocus: true %>
-    </div>
-
-    <div class="login">
-      <%= f.email_field :email, class:"", id:"email", placeholder:"Email" %>
-    </div>
-
-    <div class="login">
-      <%= f.password_field :password, class:"", id:"password", placeholder:"Password" ,autocomplete: "off" %>
-    </div>
-
-    <div class="login">
-      <%= f.password_field :password_confirmation, class:"", id:"password_confirmation", placeholder:"password Confirmation" ,autocomplete: "off" %>
-    </div>
-
-    <div class='login'>
-      <%= f.submit :register, class:"", id:"register", placeholder:"Register" %>
-    </div>
-
   <%#画面は実装できたが、保存ができない%>
   <%# <div class="login">
     <input type="text" placeholder="Nickname" name="user"><br>
@@ -40,5 +38,4 @@
   </div> %>
 
 <% end %>
-
 <%= render "shared/second-footer"%>
