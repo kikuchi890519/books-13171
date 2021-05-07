@@ -1,4 +1,4 @@
-class Author < ActiveHash::Base
+class PublishingCompany < ActiveHash::Base
   
   self.data = [
     { id: 0, name: '---' },
@@ -24,5 +24,8 @@ class Author < ActiveHash::Base
     { id: 20, name: 'アルファポリス' },
     { id: 21, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :books
 
 end

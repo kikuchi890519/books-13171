@@ -10,7 +10,7 @@ class Category < ActiveHash::Base
     { id: 6, name: 'アート・教養・エンタメ' },
     { id: 7, name: '事典・図鑑・語学・辞書' },
     { id: 8, name: 'こども' },
-    { id: , name: 'その他' }
+    { id: 9, name: 'その他' }
   ]
 
   include ActiveHash::Associations

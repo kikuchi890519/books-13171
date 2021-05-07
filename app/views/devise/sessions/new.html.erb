@@ -1,7 +1,36 @@
 <%= render "shared/second-header"%>
 
-<%= form_with class: 'registration-main',model: @user, url: user_session_path,method: :post, local: true do |f| %>
-<div class='form-wrap'>
+<%= form_with class: 'registration-main',model: @user, url: user_session_path,method: :post, local: true do |form| %>
+<%# <%= render "shared/second-header"%> %>
+
+<%# <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |form| %>
+<div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+      <div>Our<span>Library</span></div>
+    </div>
+    <br>
+
+    <%= render 'shared/error_messages', model: form.object %>
+
+    <div class="login">
+        <%= form.email_field :email, class:"", id:"email", placeholder:"Email" ,autofocus:true %>
+    </div>
+
+    <div class="login">
+        <%= form.password_field :password, class:"", id:"password", placeholder:"Password" ,autocomplete: "off" %>
+    </div>
+
+     <div class='login'>
+    <%= form.submit :register, class:"", id:"register", value:"Login" %>
+  </div>
+
+<% end %>
+
+<%= render "shared/second-footer"%>
+
+<%# -----元々の記述 %>
+<%# <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
       会員情報入力
@@ -9,27 +38,27 @@
   </div>
   <div class='login-flash-message'>
     <%= flash[:notice] %>
-    <%= flash[:alert] %>
+    <%# <%= flash[:alert] %> %>
     <%# 記述により1回のみフラッシュメッセージが表示 %>
-  </div>
+  <%# </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-  </div>
+  <%# </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">パスワード</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
-  </div>
-  <div class='login-btn'>
-    <%= f.submit "ログイン" ,class:"login-red-btn" %>
-  </div>
-</div>
-<% end %>
+  <%# </div> %>
+  <%# <div class='login-btn'> %>
+    <%# <%= f.submit "ログイン" ,class:"login-red-btn" %> %>
+  <%# </div> %>
+<%# </div> %>
+<%# <% end %> %>
 
-<%= render "shared/second-footer"%>
+<%# <%= render "shared/second-footer"%> %>
