@@ -19,6 +19,7 @@ before_action :authenticate_user!, only: [:new]
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   private
