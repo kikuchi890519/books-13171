@@ -14,7 +14,7 @@
         <%# 題名 %>
         <%# <span class="indispensable">必須</span> %>
       </div>
-      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"本のタイトル", maxlength:"40" %>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル", maxlength:"40" %>
 
       <div class="weight-bold-text">
         <%# 著者 %>
@@ -27,7 +27,7 @@
          <%# 要約 %>
           <%# <span class="indispensable">必須</span> %>
         </div>
-        <%= f.text_area :summary, class:"items-text", id:"item-info", placeholder:"本の要約" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :summary, class:"items-text", id:"item-info", placeholder:"レビュー" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
@@ -53,7 +53,7 @@
           <%# 得られる学び %>
           <%# <span class="indispensable">任意</span> %>
         </div>
-        <%= f.text_area :output, class:"items-text", id:"item-info", placeholder:"本を読んで得られた学び" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :output, class:"items-text", id:"item-info", placeholder:"得られた学び" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <%# /商品の詳細 %>
 

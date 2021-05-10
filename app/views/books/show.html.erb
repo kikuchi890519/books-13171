@@ -26,15 +26,8 @@
       <%# </span>
     </div> %>
 
-    <%# <% if user_signed_in? && @book.purchase_record.blank? %>
-    
-      <%# <% if current_user.id  == @book.user_id %>
-        <%# <%= link_to "商品の編集", edit_book_path(@book.id), class: "item-red-btn" %>
-          <%# <p class="or-text">or</p>
-        <%= link_to "削除", book_path(@book.id), method: :delete, class:"item-destroy" %>
-      <%# <% else %>
-        <%# <%= link_to "購入画面に進む", item_purchase_records_path(book_id: @book.id), class:"item-red-btn"%>
-      <%# <% end %>
+    <%# <% if user_signed_in? && @book.purchase_record.blank? %> 
+
 
     <%# <div class="item-explain-box">
       <span><%= @book.title %>
@@ -54,7 +47,7 @@
         </tr>
 
         <tr>
-          <th class="detail-item">要約</th>
+          <th class="detail-item">レビュー</th>
           <td class="detail-value"><%= @book.summary %></td>
         </tr>
 
@@ -69,7 +62,7 @@
         </tr>
 
         <tr>
-          <th class="detail-item">得た学び</th>
+          <th class="detail-item">得られた学び</th>
           <td class="detail-value"><%= @book.output %></td>
         </tr>
         
@@ -90,12 +83,20 @@
           <td class="detail-value"><%= @item.days_ship.name %></td>
         <%# </tr> %>
       </tbody>
-
     </table>
+
+      <% if current_user.id  == @book.user_id %>
+        <%= link_to "編集", edit_book_path(@book.id), class: "item-red-btn" %>
+        <%= link_to "削除", book_path(@book.id), method: :delete, class:"item-destroy" %>
+      <% else %>
+        <%# <%= link_to "購入画面に進む", item_purchase_records_path(book_id: @book.id), class:"item-red-btn"%>
+      <% end %>
+
+
       <div class="option">
         <div class="favorite-btn">
           <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-          <span>お気に入り 0</span>
+          <span>貸してね 0</span>
         </div>
       
         <div class="report-btn">

@@ -1,41 +1,32 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
 
-<%# <h1>
-<a href="/">Our Library</a>
-<h1>
-<nav class="pc-nav">
- <ul>
-    <li><a href="#">ABOUT</a></li>
-    <li><a href="#">SERVICE</a></li>
-    <li><a href="#">COMPANY</a></li>
-    <li><a href="#">CONTACT</a></li>
-</ul>
-</nav> %>
-
   <div class='search-bar-contents'>
-    <%# <%= link_to image_tag("book-logo.png", class:"book-icon") %>
-    <%# <form class="search-form" action="#">
-      <input class='input-box' placeholder='キーワードから探す'>
-      <button class="search-button">
-        <%= image_tag "search.png", class:"search-icon" %>
-      <%# </button> %>
-    <%# </form> %>
   </div>
   <div class='nav'>
+    
     <ul class='lists-left'>
       <%# <%= link_to image_tag("book-logo.png", class: :logo), root_path %>
-      <%# <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
-      <%# <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
+      <div class ='our-sentence'>
+        <li>Our</li>
+      </div>
+    
+      <div class ='library-sentence'>
+        <li>Library</li>
+      </div>
+      <%# <li><%= link_to 'カテゴリー', "#", class: "category-list" %>
+      <%# <li><%= link_to 'ブランド', "#", class: "brand-list" %>
     </ul>
-    <ul class='lists-right'>
-       <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+
+    <ul class='lists-right'> 
+      <% if user_signed_in? %>
+      <li><%= link_to "ようこそ  #{current_user.nickname}さん", "#", class: "user-nickname" %></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
-       <% else %>
-      <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
+        <% else %>
+      <li><%= link_to "ログイン", new_user_session_path, class: "logon" %></li>
       <li><%= link_to "新規登録", new_user_registration_path,method: :get, class: "sign-up" %></li>
-      <% end %>
+        <% end %>
     </ul>
+    
   </div>
 </header>

@@ -39,16 +39,35 @@ a {
   margin-top: 24px;
 }
 
-// .apple-btn {
-//   margin-right: 1vw;
-//   height: 9vh;
-// }
+.blank-space {
+  padding:10px;
+  background-color:red ;
+}
 
-// .google-btn {
-//   height: 9vh;
-// }
+.book-introduce {
+  font-size:15px;
+  background-color:#DDDDDD;
+}
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+.book-primary-items {
+  color: #505050;/*文字色*/
+  margin:15px;
+  border-left: 10px solid #008080;
+  border-bottom: 1px solid #505050;
+  padding: 5px 20px;
+}
+
+.book-secondary-items{
+  padding: 1rem 2rem; 
+  color: #505050;
+}
+
+.book-tertiary-items {
+  padding: 1rem 2rem;
+  color: #505050;
+  border-top: 1px solid#505050;
+
+}
 
 /* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
@@ -78,6 +97,11 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.list {
+  color:white;
+  word-spacing: 1em;
 }
 
 .reason-lists>.list {
@@ -226,6 +250,11 @@ a {
   padding: 10vh 0;
 }
 
+.after {
+  font-size: 15px;
+  margin-left: 15px;
+}
+
 .book-contents>.title {
   font-size: 5vh;
   line-height: 1.4;
@@ -289,6 +318,7 @@ a {
 .item-name {
   font-size: 2.5vh;
 }
+
 
 .item-price {
   font-size: 1.5vh;

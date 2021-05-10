@@ -3,9 +3,9 @@
 }
 
 .top-page-header {
-  max-height:60px;
+  max-height:70px;
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 5vw;
   display: flex;
   flex-direction: column;
   background-color:#333;
@@ -51,24 +51,45 @@
 }
 
 .nav {
-  font-size: 18px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+  /* padding: 1vh 0; */
   position: relative;
+ 
 }
 
 .lists-left {
   display: flex;
   min-width: 200px;
+  margin-bottom: 2px;
 }
 
-.category-list {
+.our-sentence {
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 0px;
   text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
+  background: #333333;/*ボタン色*/
+  color: #0000DD;/*ボタン色より暗く*/
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.library-sentence{
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 3px;
+  text-decoration: none;
+  background: #333333;/*ボタン色*/
+  color: #EEEEEE;/*ボタン色より暗く*/
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .brand-list {
@@ -77,25 +98,67 @@
 }
 
 .lists-right {
+  font-size: 18px;
   display: flex;
   list-style: none;
   align-items: flex-end;
 }
 
 .user-nickname {
+  font-size: 18px;
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 6px;
   text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
+  background: #444444;/*ボタン色*/
+  color: #CCCCCC;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
   font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 
 .logout {
-  text-decoration: none;
   color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-.login {
+.logout:hover{
+  background-color:#666666 ;
+  }
+
+.logon {
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 6px;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.logon:hover{
+background-color:#666666 ;
+}
+
+.must-login {
   text-decoration: none;
   line-height: 40px;
   margin-right: 1vw;
@@ -105,12 +168,20 @@
 .sign-up {
   /* text-decoration: none;
   color: #333333; */
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 1em;
-  color: #DCDCDC;
   text-decoration: none;
-  user-select: none;
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
   border-radius: 3px;
-  transition: 0.4s ease;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
+
+.sign-up:hover{
+  background-color:#666666 ;
+  }
