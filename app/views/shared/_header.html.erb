@@ -6,7 +6,7 @@
   <div class='nav'>
     
     <ul class='lists-left'>
-      <%# <%= link_to image_tag("book-logo.png", class: :logo), root_path %>
+    <%# <%= image_tag "book-logo.png",:width => '60', :height => '60',class: :logo %>
       <div class ='our-sentence'>
         <li>Our</li>
       </div>
@@ -20,12 +20,12 @@
 
     <ul class='lists-right'> 
       <% if user_signed_in? %>
-      <li><%= link_to "ようこそ  #{current_user.nickname}さん", "#", class: "user-nickname" %></li>
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
-        <% else %>
-      <li><%= link_to "ログイン", new_user_session_path, class: "logon" %></li>
-      <li><%= link_to "新規登録", new_user_registration_path,method: :get, class: "sign-up" %></li>
-        <% end %>
+        <li><%= link_to "ようこそ  #{current_user.nickname}さん", "#", class: "user-nickname" %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to "ログイン", new_user_session_path, class: "logon" %></li>
+        <li><%= link_to "新規登録", new_user_registration_path,method: :get, class: "sign-up" %></li>
+      <% end %>
     </ul>
     
   </div>
