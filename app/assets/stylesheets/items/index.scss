@@ -2,6 +2,27 @@ a {
   text-decoration: none;
 }
 
+// jQuery.BgSwitcherに必要な記述
+.bg-slider {
+  width: 100vw;
+  height: 100vh;
+  background-position:center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-slider__title{
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 1px 1px 1px #000;
+}
+
+// jQuery.BgSwitcherに必要な記述
+
 .main {
   background: #f8f8f8;
 }
@@ -20,18 +41,24 @@ a {
   justify-content: center;
   padding: 5vh 15vw;
   color: #CCCCCC;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .service-title {
-  font-size: 8vh;
-  line-height: 4;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align:center;
+  text-shadow: 1px 1px 1px #000;
+  transform: translateX(0%) translateY(-60%);
   // レスポンシブってどうやるのだろう？
 }
 
 .service-explain {
   font-size: 2.5vh;
   line-height: 50px;
+  transform: translateX(20%);
 }
 
 .store-btn {
@@ -41,24 +68,27 @@ a {
 
 .blank-space {
   padding:8px;
-  background-color:white;
+  // background-color:white;
+  background-color: #DDDDDD;
 }
 
 .book-introduce {
+  color: #C0C0C0;
   font-size:15px;
-  background-color:#DDDDDD;
+  background-color: #DDDDDD;
 }
 
 .letterwhite{
-  color:white;
+  color:#008080;
 }
 
 .book-primary-items {
-  color: #505050;/*文字色*/
+  color: #F4FFFd	;
   margin:5px;
   border-left: 10px solid #008080;
   border-bottom: 1px solid #505050;
   padding: 5px 10px;
+  background-color:#011936;
 }
 
 .book-secondary-items{
@@ -70,13 +100,24 @@ a {
   padding: 0.5rem 2rem;
   color: #505050;
   border-top: 1px solid#505050;
+  vertical-align: middle;
+
+}
+
+.fa-hand-point-right{
+  color:#006600	;
 }
  
-.book-tertiary-items>h4::before,
-.book-tertiary-items>h4::after{
-  content: "□□□";
-  // position: absolute;
+.fa-hand-peace{
+  color:#660000;
 }
+
+
+// .book-tertiary-items>h4::before,
+// .book-tertiary-items>h4::after{
+//   content: "□□□";
+//   // position: absolute;
+// }
 
 .book-tertiary-items>h4::before{
   left:0;
@@ -330,7 +371,7 @@ a {
 
 
 .item-info {
-  background-color: #FFF;
+  background-color: #DDDDDD;
   color: black;
   padding: 1vw;
 }

@@ -85,13 +85,22 @@
       </tbody>
     </table>
 
+    <div class="book-select">
       <% if current_user.id  == @book.user_id %>
-        <%= link_to "編集", edit_book_path(@book.id), class: "item-red-btn" %>
-        <%= link_to "削除", book_path(@book.id), method: :delete, class:"item-destroy" %>
+      <div class = "item-red-btn">
+      <i class="fas fa-pencil-alt fa-1x "></i>
+      <%= link_to "Edit", edit_book_path(@book.id), class: "item-red-btn" %>
+      </div>
+
+      <div class="item-destroy">
+        <i class="fas fa-trash fa-1x"></i>
+        <%= link_to "Delete", book_path(@book.id), method: :delete, class:"item-destroy" %>
+      </div>
+      
       <% else %>
         <%# <%= link_to "購入画面に進む", item_purchase_records_path(book_id: @book.id), class:"item-red-btn"%>
       <% end %>
-
+    </div>
 
       <div class="option">
         <div class="favorite-btn">
@@ -101,7 +110,7 @@
       
         <div class="report-btn">
           <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-          <span>不適切な商品の通報</span>
+          <span>不適切な内容の通報</span>
         </div>
       </div>
   </div>
@@ -123,10 +132,10 @@
   </div>
   <div class="links">
     <a href="#" class="change-item-btn">
-      ＜ 前の商品
+      <<
     </a>
     <a href="#" class="change-item-btn">
-      後ろの商品 ＞
+      >>
     </a>
   </div>
   <a href="#" class="another-item"><%= @book.category.name %>をもっと見る</a>

@@ -64,7 +64,7 @@ cite,
 code,
 dfn,
 em,
-strong,
+/* strong, */
 th,
 var {
   font-style:normal;

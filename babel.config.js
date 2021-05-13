@@ -66,6 +66,10 @@ module.exports = function(api) {
         {
           async: false
         }
+        
+        {
+          "presets": ["@babel/preset-env","@babel/preset-react"]
+        }
       ]
     ].filter(Boolean)
   }

@@ -1,6 +1,6 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <%= link_to image_tag('book-logo-color03.png' , size: '160x120'),root_path %>
 
   </header>
   <div class="items-sell-main">
@@ -150,6 +150,7 @@
     <%# /注意書き %>
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
+   
       <%= f.submit "紹介する" ,class:"sell-btn" %>
       <%=link_to '戻る', root_path, class:"back-btn" %>
     </div>
@@ -158,15 +159,15 @@
   
   <% end %>
 
-  <footer class="items-sell-footer">
+  <%# <footer class="items-sell-footer">
     <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">フリマ利用規約</a></li>
+      <li><a href="#">PRIVACY POLICY</a></li>
+      <li><a href="#">OurLiv 利用規約</a></li>
       <li><a href="#">特定商取引に関する表記</a></li>
     </ul>
     <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-    <p class="inc">
-      ©︎Furima,Inc.
+    <%# <p class="inc"> %>
+      <%# ©︎OurLib,Inc.
     </p>
-  </footer>
+  </footer> %>
 </div>

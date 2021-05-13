@@ -3,7 +3,7 @@
 }
 
 .top-page-header {
-  max-height:70px;
+  max-height:90px;
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
@@ -64,6 +64,8 @@
   display: flex;
   min-width: 200px;
   margin-bottom: 2px;
+  background-image: ;
+  transform: translateY(-35%) translateX(-15%);
 }
 
 .our-sentence {
@@ -101,7 +103,7 @@
   font-size: 18px;
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  transform: translateY(15%) translateX(0%);
 }
 
 .user-nickname {

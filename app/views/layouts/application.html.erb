@@ -2,16 +2,29 @@
 <html>
 
 <head>
-  <title>Furima</title>
+  <title>OurLib</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
+
+  <%# Font Awesomeを使用するためのコード %>
+  <script src="https://kit.fontawesome.com/47deb5100b.js" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+  <%#デフォルトの記述 %>
+  <%# <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
   <%= stylesheet_link_tag 'application', media: 'all'%>
-  <%= javascript_pack_tag 'application' %>
+  <%# <%= javascript_pack_tag 'application' %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# 上記の記述でwebpackで管理されているJavaScriptを参照している %>
+
 </head>
 
 <body>
   <%= yield %>
+  <%# Font Awesomeを使用するためのコード %>
+  <!-- Ready to use Font Awesome. Activate interlock. Dynotherms - connected. Infracells - up. Icons are go! -->
 </body>
 
 </html>

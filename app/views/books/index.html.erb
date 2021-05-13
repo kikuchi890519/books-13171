@@ -1,17 +1,30 @@
 <%= render "shared/header" %>
-<div class='main'>
+
+<%# jquery-3.0.0.min.jsというCDNから読み込むために必要な記述  %>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+  $(function() {
+  });
+</script>
+
+<%# jQuery.BgSwitcherに必要な記述 %>
+
+<%# <div class="bg-slider">
+ <h1 class="bg-slider__title">DEMO PAGE</h1>
+</div> %>
 
   <%# 画面上部の帯部分 %>
   <div class='title-contents'>
+
     <h2 class='service-title'>
-     新しい一冊が人生をもっと豊かに
+     Let's Meet The Best 
     </h2>
     
     <p class='service-explain'>
       みんなで最高の図書館をつくっていこう
     </p>
     <p class='service-explain'>
-      おすすめの本を紹介するアプリです
+       おすすめの本を紹介するアプリです
     </p>
     <%# <div class='store-btn'>
       <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
@@ -21,57 +34,65 @@
   <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
   <div class="blank-space"></div>
   <div class="book-introduce"> 
+
     <div class="book-primary-items">
-      <h3>読書の効果<h3>
+      <h3>このアプリはこんな人におすすめ<h3>
     </div>
 
+    <strong>
     <div class="book-secondary-items">
-    読書がもたらすさまざまな効果をご紹介いたします。
+    ・読書好きの友達とつながりたい！！
     </div>
+    <div class="book-secondary-items">
+    ・自分が読んだ本の学びをアウトプットしたい！！
+    </div>
+     <div class="book-secondary-items">
+    ・誰でもいいからとにかく好きな本を紹介したい！
+    </div></strong>
 
-    <div class="book-tertiary-items">
-      <h4>読書は脳のつながりを強化する</h4><br>
-      読書は脳内の異なる分野間の新たなつながりを促進する。<br>
-      思考、考察、読解力を必要とする読書は、脳内における新たなニューロンを発生させ、処理スピードを加速させる。
-      </div>
-
-    <div class="book-tertiary-items">
-      <h4>読書は加齢による認知力の低下を防ぐ</h4><br>
-      認知力には学習したり、記憶したり、判断をする能力が含まれている。 <br>
-      注意力と記憶力は年齢による影響を最も受けやすいと言われている認知機能であるが、読書といった知的活動が認知症の低下を関係していることが判明している。<br>
-      </div>
-
-    <div class="book-tertiary-items">
-      <h4>読書をストレスレベルを低下させる</h4><br>
-      30分間の読書がストレスの身体的、精神的サインを減少させることがわかっている。<br>
+    <div class="book-primary-items">
+      <h3>読書の効果について<h3>
     </div>
     
     <div class="book-tertiary-items">
-      <h4>読書は記憶力と集中力を向上させる</h4><br>
-      運動が身体を強くするように、読書は私たちの記憶力や集中力を鍛えてくれる。<br>
+      <h4><i class="fas fa-hand-point-right"></i>  脳の活性化！発想力が向上する。</h4><br>
+      漢字や文法に詳しくなり、知識が増える。<br>
+      本の内容を擬似体験したような状態になることで想像力が鍛えられる。
+      </div>
+
+    <div class="book-tertiary-items">
+      <h5><i class="fas fa-hand-point-right"></i>  会話力や文章力が向上する。</h5><br>
+      多方面から（客観的に）物事を考えられるようになり、相手の言葉が理解できるようになる。<br>
+      言葉の表現などが豊かになり、人とのコミュニケーション力が養われる。<br>
+    </div>
+    
+    <div class="book-tertiary-items">
+      <h6><i class="fas fa-hand-point-right"></i>  ストレスの解消効果がある。</h6><br>
+      6分の読書でストレスが68%も解消されたことが論文で証明されている。<br>
+      うつ病の改善や寿命にまで好影響があることがわかっている。<br>
     </div>
 
     <div class="blank-space"></div>
     <div class="book-primary-items">
-      <h3>オススメの本の読み方<h3>
+      <h3>読書を習慣化するためのコツについて<h3>
     </div>
 
     <div class="book-tertiary-items">
-    <h4>ツッコミをいれながら読んでみる</h4><br>
-      著者も人間なのですべて正しいことが書かれていない<br>
-      自分の感性と比べて思ったことを突っ込みながら読んでいく
+    <h4><i class="fas fa-hand-peace"></i> 自分の読みやすい本を見つける。</h4><br>
+      自分に必要ない本、興味がないジャンルの本は読まない。<br>
+      話題のベストセラーというだけの理由で選ばない。
     </div>
 
     <div class="book-tertiary-items">
-    <h4>著者月間を作る</h4><br>
-      例えば同じテーマの本でもいくつか読んでみることが大事<br>
-      1冊では点だが、いくつか本を読むことで面になる。
+    <h4><i class="fas fa-hand-peace"></i>  読書することに意気込まない。</h4><br>
+      最初の１週間は毎日１分間だけでも読書することを目標にする。<br>
+      習慣づけるために脳にこれは"毎日の行動であること"を理解させる。
     </div>
 
     <div class="blank-space"></div>
 
    <div class='book-contents'>
-    <h2 class='title'>ピックアップカテゴリー
+    <h2 class='title'>Posts List
     <span class="after">投稿一覧</span></h2>
     <%# <%= link_to '新規投稿一覧', "#", class: "subtitle" %>
     <ul class='book-lists'>
@@ -79,7 +100,8 @@
     <% @books.each do |book| %>
       <li class='list'>
       <p>
-      <%= link_to "紹介者 #{book.user.nickname}", user_path(book.user.id),method: :get, class: :letterwhite %></p>
+      <strong>
+      <%= link_to "紹介者 #{book.user.nickname}", user_path(book.user.id),method: :get, class: :letterwhite %></strong></p>
       <%# <p><a> 紹介者 </a><%= "#{book.user.nickname}"%></p>
           <%= link_to book_path(book) do %>
           <div class='item-img-content'>

@@ -1,27 +1,30 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
+<%# <%= link_to image_tag("book-logo01.png", class:"furima-icon",), "/" %>
 <header class='top-page-header'>
-
   <div class='search-bar-contents'>
   </div>
   <div class='nav'>
     
-    <ul class='lists-left'>
-    <%# <%= image_tag "book-logo.png",:width => '60', :height => '60',class: :logo %>
-      <div class ='our-sentence'>
-        <li>Our</li>
+    <div class='lists-left'>
+      <%= link_to image_tag('book-logo-color03.png' , size: '160x120'),root_path %>
+
+      <%# <div class ='our-sentence'> %>
+
+   
+        <%# <li>Our</li>
       </div>
     
       <div class ='library-sentence'>
-        <li>Library</li>
+        <li>Lib</li> %>
       </div>
       <%# <li><%= link_to 'カテゴリー', "#", class: "category-list" %>
       <%# <li><%= link_to 'ブランド', "#", class: "brand-list" %>
-    </ul>
+    <%# </ul> %>
 
     <ul class='lists-right'> 
       <% if user_signed_in? %>
         <li><%= link_to "ようこそ  #{current_user.nickname}さん", "#", class: "user-nickname" %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path,method: :get, class: "logout" %></li>
       <% else %>
         <li><%= link_to "ログイン", new_user_session_path, class: "logon" %></li>
         <li><%= link_to "新規登録", new_user_registration_path,method: :get, class: "sign-up" %></li>
