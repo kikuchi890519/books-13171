@@ -2,42 +2,19 @@
 
 <%# 商品の概要 %>
 <div class="item-show">
+
   <div class="item-box">
+
+    <div class="item-img-content">
+      <%= image_tag @book.image ,class:"item-box-img" %>
+    </div>
+
+  </div>
+
     <h2 class="name">
       <%= @book.title %>
     </h2>
-    <div class="item-img-content">
-      <%= image_tag @book.image ,class:"item-box-img" %>
-      
-      <%# purchase_recordに情報が入れば表示する %>
-      <%# <% if @item.purchase_record.present? %>
-      <%# <div class="sold-out">
-       <span>Sold Out!!</span>
-       </div>
-      <% end %>
-      
-    </div>
-    <%# <div class="item-price-box">
-      <span class="item-price">
-       <%= @item.price %> 
-      <%# </span>
-      <span class="item-postage">
-        <%= @item.shipping_charge.name %>
-      <%# </span>
-    </div> %>
 
-    <%# <% if user_signed_in? && @book.purchase_record.blank? %> 
-
-
-    <%# <div class="item-explain-box">
-      <span><%= @book.title %>
-      <%# </span> %>
-    <%# </div>
-
-    <div class="item-explain-box">
-      <span><%= @book.author %>
-      <%# </span> %>
-    <%# </div> %>
 
     <table class="detail-table">
       <tbody>
@@ -65,41 +42,25 @@
           <th class="detail-item">得られた学び</th>
           <td class="detail-value"><%= @book.output %></td>
         </tr>
-        
-        <%# <tr>
-          <th class="detail-item">商品の状態</th>
-          <td class="detail-value"><%= @book.condition.name %></td>
-        <%# </tr>
-        <tr>
-          <th class="detail-item">配送料の負担</th>
-          <td class="detail-value"><%= @item.shipping_charge.name %></td>
-        <%# </tr>
-        <tr>
-          <th class="detail-item">発送元の地域</th>
-          <td class="detail-value"><%= @item.city.name %></td>
-        <%# </tr> %>
-        <%# <tr>
-          <th class="detail-item">発送日の目安</th>
-          <td class="detail-value"><%= @item.days_ship.name %></td>
-        <%# </tr> %>
       </tbody>
     </table>
 
     <div class="book-select">
-      <% if current_user.id  == @book.user_id %>
-      <div class = "item-red-btn">
-      <i class="fas fa-pencil-alt fa-1x "></i>
-      <%= link_to "Edit", edit_book_path(@book.id), class: "item-red-btn" %>
-      </div>
+      <% if user_signed_in? %>
+        <% if current_user.id  == @book.user_id %>
+          <div class = "item-red-btn">
+             <i class="fas fa-pencil-alt fa-1x "></i>
+             <%= link_to "Edit", edit_book_path(@book.id), class: "item-red-btn" %>
+          </div>
 
-      <div class="item-destroy">
-        <i class="fas fa-trash fa-1x"></i>
-        <%= link_to "Delete", book_path(@book.id), method: :delete, class:"item-destroy" %>
-      </div>
-      
-      <% else %>
+          <div class="item-destroy">
+            <i class="fas fa-trash fa-1x"></i>
+            <%= link_to "Delete", book_path(@book.id), method: :delete, class:"item-destroy" %>
+          </div>
+        <% else %>
         <%# <%= link_to "購入画面に進む", item_purchase_records_path(book_id: @book.id), class:"item-red-btn"%>
-      <% end %>
+       <% end %>
+            <% end %>
     </div>
 
       <div class="option">
