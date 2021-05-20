@@ -4,17 +4,13 @@
 <div class="item-show">
 
   <div class="item-box">
-
-    <div class="item-img-content">
-      <%= image_tag @book.image ,class:"item-box-img" %>
-    </div>
-
-  </div>
-
     <h2 class="name">
       <%= @book.title %>
     </h2>
 
+    <div class="item-img-content">
+      <%= image_tag @book.image ,class:"item-box-img" %>
+    </div>
 
     <table class="detail-table">
       <tbody>
