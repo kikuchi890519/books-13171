@@ -1,24 +1,24 @@
+## 📖OurLib（みんなの図書館）
+## 読書を広くすすめることを目的としたSNS
 
 [![Image from Gyazo](https://i.gyazo.com/ee430924f7b41837be317d87374cbe43.gif)](https://gyazo.com/ee430924f7b41837be317d87374cbe43)
 
-# README
-## アプリケーション名
-Our Lib（みんなの図書館）
-
-## アプリケーション概要
+## 📝概要
 自分のオススメの本を友人などに共有するアプリ
 
-## URL（デプロイ済み次第）
+## 🌐APP URL（デプロイ完了次第記載）
 
 ## テスト用アカウント
-メールアドレス /
-パスワード /
+メールアドレス/test@gmail.com
+パスワード/12345k
 
-## 利用方法
-ログインユーザーはオススメの本を紹介する
+## 💻利用方法
+・トップページから新規登録・ログイン
+・新規投稿は右下の「紹介」ボタンをクリック
+・紹介完了後は一覧画面へ遷移
+・本情報の詳細は一覧画面の画像をクリック
 
-
-## 目指した課題解決
+## 課題解決
 読書を広くすすめたい
 色んな人が読書を習慣化すること
 読書の学びを共有したい
@@ -31,21 +31,22 @@ Our Lib（みんなの図書館）
 出品機能
 貸してね機能
 
-## データベース設計
-
 ## ローカルでの動作方法
+$ git clone https://github.com/kikuchi890519/books-13171
+$ cd books-13171
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+http://localhost:3000
 
 
-
+## DB設計
 ## Users
 |Column                |Type   |Options                |
 |nickname              |string |null:false, unique:true|
 |email                 |string |null:false, unique:true|
 |encrypted_password    |string |null:false             |
-|first_name            |string |null:false             |
-|last_name             |string |null:false             |
-|first_name_kana       |string |null:false             |
-|last_name_kana        |string |null:false             |
 
 ### Association
 - has_many :books
@@ -100,3 +101,4 @@ Our Lib（みんなの図書館）
 
 ### Association
 - belongs_to     :order
+
