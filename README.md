@@ -4,7 +4,7 @@
 ![OurLib画像](https://user-images.githubusercontent.com/80946751/119113266-e44f6500-ba5f-11eb-9fa6-bd3a017da556.jpeg)
 
 ## 📝 概要
-自分のオススメの本を友人などに共有するアプリ
+### 自分のオススメの本を友人などに共有するアプリ
 
 ## 🌐 APP URL（デプロイ完了次第記載）
 
