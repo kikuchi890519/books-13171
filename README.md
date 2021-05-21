@@ -1,6 +1,8 @@
 ## 📖 OurLib（みんなの図書館）
 ## 読書を広くすすめることを目的としたSNS
 
+![OurLib画像](https://user-images.githubusercontent.com/80946751/119113266-e44f6500-ba5f-11eb-9fa6-bd3a017da556.jpeg)
+
 [![Image from Gyazo](https://i.gyazo.com/ee430924f7b41837be317d87374cbe43.gif)](https://gyazo.com/ee430924f7b41837be317d87374cbe43)
 
 ## 📝 概要
@@ -49,7 +51,7 @@ $ rails s
 http://localhost:3000  
 
 ## 👀 開発環境
-- VScode
+- VScode（Visual Studio Code）
 - Ruby 2.6.5
 - Rails 6.0.3.4
 - mysql2 0.5.3
@@ -71,16 +73,16 @@ http://localhost:3000
 - has_many :likes
 
 ## Booksテーブル
-|Column             |Type       |Options          |
-|-------------------|-----------|-----------------|
-|name               |string     |null:false       |
-|title              |string     |null:false       |
-|author             |string     |null:false       |
-|publishing_company_id |integer    |null:false    |
-|category_id        |integer    |null:false       |
-|summary            |text       |null:false       |
-|output             |text       |null:false       |
-|user               |references |foreign_key: true|
+|Column                |Type       |Options          |
+|----------------------|-----------|-----------------|
+|name                  |string     |null:false       |
+|title                 |string     |null:false       |
+|author                |string     |null:false       |
+|publishing_company_id |integer    |null:false       |
+|category_id           |integer    |null:false       |
+|summary               |text       |null:false       |
+|output                |text       |null:false       |
+|user                  |references |foreign_key: true|
 
 ### Association
 - belongs_to :user
