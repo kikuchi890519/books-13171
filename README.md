@@ -6,9 +6,9 @@
 ## 📝 概要
 自分のオススメの本を友人などに共有するアプリ
 
-## 🌐APP URL（デプロイ完了次第記載）
+## 🌐 APP URL（デプロイ完了次第記載）
 
-## テスト用アカウント
+## 🤖 テスト用アカウント
 メールアドレス/test@gmail.com
 パスワード/12345k
 
@@ -27,7 +27,7 @@
 
 ## 実装した機能についての画像やGIFおよびその説明
 
-## 追加予定の機能
+## ✍追加予定の機能
 ・コメント機能
 ・貸してね機能
 
@@ -44,7 +44,9 @@ http://localhost:3000
 
 ## DB設計
 ## Usersテーブル
+
 |Column                |Type   |Options                |
+|----------------------|-------|-----------------------|
 |nickname              |string |null:false, unique:true|
 |email                 |string |null:false, unique:true|
 |encrypted_password    |string |null:false             |
@@ -56,6 +58,7 @@ http://localhost:3000
 
 ## Booksテーブル
 |Column             |Type       |Options          |
+|-------------------|-----------|-----------------|
 |name               |string     |null:false       |
 |title              |string     |null:false       |
 |author             |string     |null:false       |
@@ -73,6 +76,7 @@ http://localhost:3000
 
 ## Likesテーブル
 |Column         |Type         |Options          |
+|---------------|-------------|-----------------|
 |user           |references   |foreign_key: true|
 |book           |references   |foreign_key: true|
 
@@ -82,6 +86,7 @@ http://localhost:3000
 
 ## Ordersテーブル
 |Column         |Type         |Options          |
+|---------------|-------------|-----------------|
 |user           |references   |foreign_key: true|
 |book           |references   |foreign_key: true|
 
@@ -92,6 +97,7 @@ http://localhost:3000
 
 ## Deliveriesテーブル
 |Column             |Type       |Options          |
+|-------------------|-----------|-----------------|
 |post_code          |string     |null:false       |
 |city_id            |integer    |null:false       |
 |municipality       |string     |null:false       |
