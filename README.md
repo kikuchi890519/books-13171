@@ -9,7 +9,7 @@
 ## 🌐 APP URL（デプロイ完了次第記載）
 
 ## 🤖 テスト用アカウント
-メールアドレス / test@gmail.com
+メールアドレス / test@gmail.com  
 パスワード / 12345k
 
 ## 💻 利用方法
@@ -28,25 +28,25 @@
 |------------------|--------------------------------------------|
 | ユーザー管理機能    | 新規登録・ログイン・ログアウトが可能             |
 | 投稿機能           | 画像付きで投稿が可能                          |
-| 投稿一覧表示機能    | 各投稿の情報を一覧表示する                     |
-| 投稿詳細表示機能    | 紹介者本人は投稿編集・削除が可能                |
+| 投稿一覧表示機能    | 各投稿情報を一覧表示する                       |
+| 投稿詳細表示機能    | 各投稿情報の詳細表示が可能                     |
+| 投稿編集削除機能    | 紹介者本人は投稿編集・削除が可能                |
 | ユーザーページ機能   | ユーザーの投稿情報を一覧することが可能          |
-
 
 ## 実装した機能についての画像やGIFおよびその説明
 
 ## 🎁 追加予定の機能
-・コメント機能
-・貸してね機能
+- コメント機能  
+- 貸してね機能
 
 ## 🚥 ローカルでの動作方法
-$ git clone https://github.com/kikuchi890519/books-13171
-$ cd books-13171
-$ bundle install
-$ rails db:create
-$ rails db:migrate
-$ rails s
-http://localhost:3000
+$ git clone https://github.com/kikuchi890519/books-13171  
+$ cd books-13171  
+$ bundle install  
+$ rails db:create  
+$ rails db:migrate  
+$ rails s  
+http://localhost:3000  
 
 ## 👀 開発環境
 - VScode
@@ -76,11 +76,10 @@ http://localhost:3000
 |name               |string     |null:false       |
 |title              |string     |null:false       |
 |author             |string     |null:false       |
-|publishing_company |integer    |null:false       |
+|publishing_company_id |integer    |null:false    |
 |category_id        |integer    |null:false       |
 |summary            |text       |null:false       |
 |output             |text       |null:false       |
-|price              |integer    |null:false       |
 |user               |references |foreign_key: true|
 
 ### Association
@@ -97,29 +96,3 @@ http://localhost:3000
 ### Association
 - belongs_to    :user
 - belongs_to    :book
-
-## Ordersテーブル
-|Column         |Type         |Options          |
-|---------------|-------------|-----------------|
-|user           |references   |foreign_key: true|
-|book           |references   |foreign_key: true|
-
-### Association
-- belongs_to    :user
-- belongs_to    :book
-- has_one       :delivery
-
-## Deliveriesテーブル
-|Column             |Type       |Options          |
-|-------------------|-----------|-----------------|
-|post_code          |string     |null:false       |
-|city_id            |integer    |null:false       |
-|municipality       |string     |null:false       |
-|address            |string     |null:false       |
-|building_name      |string     |                 |
-|phone_number       |string     |null:false       |
-|order              |references |foreign_key: true|
-
-### Association
-- belongs_to     :order
-
