@@ -22,6 +22,9 @@
 https://user-images.githubusercontent.com/80946751/119115165-d7337580-ba61-11eb-9b27-fdd222341a08.mp4
 
 
+https://user-images.githubusercontent.com/80946751/119118562-48285c80-ba65-11eb-9df4-80bf6dc85f0b.mp4
+
+
 - 紹介完了後は一覧画面へ遷移
 - 本情報の詳細は一覧画面の画像をクリック
 
