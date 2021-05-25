@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  max-height:90px;
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color:#333;
+  /* position:fixed; */
+  /* ポジションを固定 */
+  top:0;
+}
+
+/* .search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.book-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #cea979;
+  padding: 6px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  /* padding: 1vh 0; */
+  position: relative;
+ 
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+  margin-bottom: 2px;
+  background-image: ;
+  transform: translateY(-35%) translateX(-15%);
+}
+
+.our-sentence {
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  text-decoration: none;
+  background: #333333;/*ボタン色*/
+  color: #0000DD;/*ボタン色より暗く*/
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.library-sentence{
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 3px;
+  text-decoration: none;
+  background: #333333;/*ボタン色*/
+  color: #EEEEEE;/*ボタン色より暗く*/
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.brand-list {
+  text-decoration: none;
+  color: #333333;
+}
+
+.lists-right {
+  font-size: 18px;
+  display: flex;
+  list-style: none;
+  transform: translateY(15%) translateX(0%);
+}
+
+.user-nickname {
+  font-size: 18px;
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 6px;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #CCCCCC;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+
+.logout {
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.logout:hover{
+  background-color:#666666 ;
+  }
+
+.logon {
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-right: 6px;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.logon:hover{
+background-color:#666666 ;
+}
+
+.must-login {
+  text-decoration: none;
+  line-height: 40px;
+  margin-right: 1vw;
+  color: #DCDCDC;
+}
+
+.sign-up {
+  /* text-decoration: none;
+  color: #333333; */
+  text-decoration: none;
+  color: #DCDCDC;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #444444;/*ボタン色*/
+  color: #333333;/*ボタン色より暗く*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.sign-up:hover{
+  background-color:#666666 ;
+  }

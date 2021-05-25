@@ -1,0 +1,101 @@
+<%= render "shared/header" %>
+
+<%# 商品の概要 %>
+<div class="item-show">
+
+  <div class="item-box">
+    <h2 class="name">
+      <%= @book.title %>
+    </h2>
+
+    <div class="item-img-content">
+      <%= image_tag @book.image ,class:"item-box-img" %>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">紹介者</th>
+          <td class="detail-value"><%= @book.user.nickname %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">レビュー</th>
+          <td class="detail-value"><%= @book.summary %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @book.category.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">出版社</th>
+          <td class="detail-value"><%= @book.publishing_company.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">得られた学び</th>
+          <td class="detail-value"><%= @book.output %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="book-select">
+      <% if user_signed_in? %>
+        <% if current_user.id  == @book.user_id %>
+          <div class = "item-red-btn">
+             <i class="fas fa-pencil-alt fa-1x "></i>
+             <%= link_to "Edit", edit_book_path(@book.id), class: "item-red-btn" %>
+          </div>
+
+          <div class="item-destroy">
+            <i class="fas fa-trash fa-1x"></i>
+            <%= link_to "Delete", book_path(@book.id), method: :delete, class:"item-destroy" %>
+          </div>
+        <% else %>
+        <%# <%= link_to "購入画面に進む", item_purchase_records_path(book_id: @book.id), class:"item-red-btn"%>
+       <% end %>
+            <% end %>
+    </div>
+
+      <div class="option">
+        <div class="favorite-btn">
+          <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+          <span>貸してね 0</span>
+        </div>
+      
+        <div class="report-btn">
+          <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
+          <span>不適切な内容の通報</span>
+        </div>
+      </div>
+  </div>
+  <%# /商品の概要 %>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <button type="submit" class="comment-btn">
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+  <div class="links">
+    <a href="#" class="change-item-btn">
+      <<
+    </a>
+    <a href="#" class="change-item-btn">
+      >>
+    </a>
+  </div>
+  <a href="#" class="another-item"><%= @book.category.name %>をもっと見る</a>
+</div>
+
+<%= render "shared/footer" %>

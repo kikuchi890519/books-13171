@@ -1,0 +1,39 @@
+<div class="item-show">
+  <div class="item-box">
+
+    <div class="item-img-content">
+      <%= link_to image_tag(book.image, class: :card__img ), book_path(book.id) , method: :get%>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+
+        <tr>
+          <th class="detail-item">タイトル</th>
+          <td class="detail-value"><%= book.title %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">レビュー</th>
+          <td class="detail-value"><%= book.summary %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= book.category.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">出版社</th>
+          <td class="detail-value"><%= book.publishing_company.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">得られた学び</th>
+          <td class="detail-value"><%= book.output %></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

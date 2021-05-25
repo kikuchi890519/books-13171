@@ -1,0 +1,124 @@
+<%= render "shared/header" %>
+
+<%# jquery-3.0.0.min.jsというCDNから読み込むために必要な記述  %>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+  $(function() {
+  });
+</script>
+
+<%# jQuery.BgSwitcherに必要な記述 %>
+
+<%# <div class="bg-slider">
+ <h1 class="bg-slider__title">DEMO PAGE</h1>
+</div> %>
+
+  <%# 画面上部の帯部分 %>
+  <div class='title-contents'>
+
+    <h2 class='service-title'>
+     Let's Meet The Best 
+    </h2>
+    
+    <p class='service-explain'>
+      みんなで最高の図書館をつくっていこう
+    </p>
+    <p class='service-explain'>
+       おすすめの本を紹介するアプリです
+    </p>
+    <%# <div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%# <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    <%# </div> %>
+  </div>
+  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+  <div class="blank-space"></div>
+  <div class="book-introduce"> 
+
+    <div class="book-primary-items">
+      <h3>このアプリはこんな人におすすめ<h3>
+    </div>
+
+    <strong>
+    <div class="book-secondary-items">
+    ・読書好きの友達とつながりたい！！
+    </div>
+    <div class="book-secondary-items">
+    ・自分が読んだ本の学びをアウトプットしたい！！
+    </div>
+     <div class="book-secondary-items">
+    ・誰でもいいからとにかく好きな本を紹介したい！
+    </div></strong>
+
+    <div class="book-primary-items">
+      <h3>読書の効果について<h3>
+    </div>
+    
+    <div class="book-tertiary-items">
+      <h4><i class="fas fa-hand-point-right"></i>  脳の活性化！発想力が向上する。</h4><br>
+      漢字や文法に詳しくなり、知識が増える。<br>
+      本の内容を擬似体験したような状態になることで想像力が鍛えられる。
+      </div>
+
+    <div class="book-tertiary-items">
+      <h5><i class="fas fa-hand-point-right"></i>  会話力や文章力が向上する。</h5><br>
+      多方面から（客観的に）物事を考えられるようになり、相手の言葉が理解できるようになる。<br>
+      言葉の表現などが豊かになり、人とのコミュニケーション力が養われる。<br>
+    </div>
+    
+    <div class="book-tertiary-items">
+      <h6><i class="fas fa-hand-point-right"></i>  ストレスの解消効果がある。</h6><br>
+      6分の読書でストレスが68%も解消されたことが論文で証明されている。<br>
+      うつ病の改善や寿命にまで好影響があることがわかっている。<br>
+    </div>
+
+    <div class="blank-space"></div>
+    <div class="book-primary-items">
+      <h3>読書を習慣化するためのコツについて<h3>
+    </div>
+
+    <div class="book-tertiary-items">
+    <h4><i class="fas fa-hand-peace"></i> 自分の読みやすい本を見つける。</h4><br>
+      自分に必要ない本、興味がないジャンルの本は読まない。<br>
+      話題のベストセラーというだけの理由で選ばない。
+    </div>
+
+    <div class="book-tertiary-items">
+    <h4><i class="fas fa-hand-peace"></i>  読書することに意気込まない。</h4><br>
+      最初の１週間は毎日１分間だけでも読書することを目標にする。<br>
+      習慣づけるために脳にこれは"毎日の行動であること"を理解させる。
+    </div>
+
+    <div class="blank-space"></div>
+
+   <div class='book-contents'>
+    <h2 class='title'>Posts List
+    <span class="after">投稿一覧</span></h2>
+    <%# <%= link_to '新規投稿一覧', "#", class: "subtitle" %>
+    <ul class='book-lists'>
+
+    <% @books.each do |book| %>
+      <li class='list'>
+      <p>
+   
+      <%= link_to "紹介者 #{book.user.nickname}", user_path(book.user.id),method: :get, class: :mypage %></p>
+      <%# <p><a> 紹介者 </a><%= "#{book.user.nickname}"%></p>
+          <%= link_to book_path(book) do %>
+          <div class='item-img-content'>
+           <%= image_tag book.image, class: "item-img" %>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <p><a>著者 </a><%= "#{book.author}"%></p>
+              </h3>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+
+    <%= link_to "/books/new", class: 'purchase-btn' do %>
+      <span class='purchase-btn-text'>紹介する</span>
+      <%= image_tag 'book-icon02.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <% end %>
+
+    <%= render "shared/footer" %>
