@@ -1,0 +1,10 @@
+<%= render "shared/header" %>
+
+<div class="user-page">
+  <h2 class="name">
+    <%= " #{@user.nickname}さんの図書館 "%>
+  </h2>
+</div>
+
+
+<%= render partial: "books/book", collection: @user.books %>
